@@ -122,7 +122,7 @@ export default function Hero() {
           ref={taglineRef}
           className="mt-8 max-w-xl font-body text-base leading-relaxed text-steel md:text-lg"
         >
-          Ritun Jain — BE Computer Engineering, AI &amp; ML @ NIE Mysuru.
+          Ritun Jain — B.E. Computer Science &amp; Engineering — AI &amp; ML @ NIE Mysuru.
           Full-stack builds, AI tooling, and the occasional Discord bot.
         </p>
 
