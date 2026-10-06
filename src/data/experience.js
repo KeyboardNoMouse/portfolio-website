@@ -1,23 +1,30 @@
 export const timeline = [
   {
-    period: 'Feb 2026 — Present',
-    title: 'Student Council Member (Media Team)',
+    period: '2026 — Present',
+    title: 'Media & Marketing Team Lead',
     org: "ALPHA Innovation and Tinkerers' Lab, NIE Mysuru",
     description:
-      'Learning text and keyframe animations using After Effects and Premiere Pro. Representing the lab at external company project expos and industry showcases.',
+      'Leading the team behind digital communication, branding, and promotional campaigns for innovation programs, technical events, and student initiatives — from content planning to production across social media and event promotions.',
   },
   {
     period: 'Nov 2025 — Present',
     title: 'Student Volunteer',
     org: 'Youth For Seva',
     description:
-      'Actively participating in community impact events such as city cleaning drives and teaching school students in underserved areas.',
+      'Community initiatives including city cleaning drives and educational activities for school students in underserved communities.',
   },
   {
     period: '2024 — 2028',
-    title: 'BE, Computer Engineering — AI & ML',
+    title: 'B.E. Computer Science and Engineering — AI & ML',
     org: 'The National Institute of Engineering (NIE), Mysuru',
     description:
-      'Coursework and independent projects spanning full-stack web development, applied AI/ML tooling, and Discord bot development.',
+      'Coursework and independent projects spanning full-stack web development, applied ML, and AI developer tooling.',
   },
+]
+
+export const certifications = [
+  { title: 'Front-End Development', issuer: 'Meta / Coursera' },
+  { title: 'Python Data Structures', issuer: 'University of Michigan / Coursera' },
+  { title: 'AI For Everyone', issuer: 'DeepLearning.AI / Coursera' },
+  { title: 'Prompt Engineering Basics', issuer: 'IBM / Coursera' },
 ]

@@ -1,22 +1,8 @@
 export const skillGroups = [
-  {
-    label: 'Languages',
-    items: ['Python', 'JavaScript', 'TypeScript', 'Java', 'C', 'HTML5', 'CSS'],
-  },
-  {
-    label: 'Full Stack & Web',
-    items: ['Django', 'MERN Stack', 'React', 'MySQL', 'REST APIs'],
-  },
-  {
-    label: 'AI / ML',
-    items: ['Generative AI', 'Prompt Engineering', 'Gemini API', 'Model Context Protocol (MCP)'],
-  },
-  {
-    label: 'Bots & Backend',
-    items: ['discord.js', 'Node.js', 'SQLite'],
-  },
-  {
-    label: 'Creative & Tooling',
-    items: ['Adobe CC', 'Premiere Pro', 'After Effects', 'Canva', 'Git & GitHub'],
-  },
+  { label: 'Languages', items: ['Python', 'C++', 'JavaScript', 'TypeScript', 'SQL', 'HTML5', 'CSS3'] },
+  { label: 'Frontend', items: ['React', 'Next.js', 'Tailwind CSS'] },
+  { label: 'Backend', items: ['Node.js', 'Express.js', 'REST APIs'] },
+  { label: 'AI / ML', items: ['NumPy', 'Pandas', 'scikit-learn', 'TensorFlow', 'Hugging Face', 'LangChain', 'Gemini'] },
+  { label: 'Databases', items: ['MongoDB', 'SQLite', 'PostgreSQL'] },
+  { label: 'Tools', items: ['Git', 'GitHub', 'AWS', 'VS Code', 'Postman'] },
 ]

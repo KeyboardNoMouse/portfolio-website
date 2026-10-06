@@ -1,73 +1,57 @@
-# samurai-portfolio
+# ritun.space
 
-A katana/sakura-themed portfolio site. React + Vite + Tailwind CSS, animated with
-GSAP (ScrollTrigger) and Framer Motion, smooth-scrolled with Lenis.
+Personal portfolio of **Ritun Jain** — B.E. Computer Science & Engineering (AI & ML) student at NIE Mysuru, building toward AI Engineer and Full-Stack Developer roles.
 
-## Run it
+**Live:** [ritun.space](https://ritun.space)
+
+A katana- and cherry-blossom-themed single-page site with a scroll-driven intro, a canvas petal field, and an interactive terminal that answers questions about my work.
+
+## Features
+
+- Katana-slash hero intro (GSAP timeline) over a hand-rolled canvas sakura field
+- Project cards with an "unsheathe" hover effect and a synthesized blade sound
+- **Interactive terminal** (`ritun.sh`): type `help`, `projects 2`, `skills`, `experience`, `certs`, `contact`, `github` or `linkedin`. Tab autocompletes, ↑/↓ recall history, and tappable command buttons work on touch devices
+- Smooth scrolling with Lenis, scroll-triggered reveals, `prefers-reduced-motion` respected
+- All content lives in data files, so updating the site never means touching JSX
+
+## Tech stack
+
+React 18 · Vite · Tailwind CSS · GSAP (ScrollTrigger) · Framer Motion · Lenis · Lucide icons
+
+## Run locally
 
 ```bash
 npm install
-npm run dev       # http://localhost:5173
-```
-
-```bash
+npm run dev        # http://localhost:5173
 npm run build      # production build -> dist/
-npm run preview    # serve the production build locally
+npm run preview    # serve the production build
 ```
 
-Deploys as a static site anywhere (Vercel, Netlify, GitHub Pages, etc.) —
-just point the host at `npm run build` with `dist/` as the output directory.
+## Editing content
 
-## Before you launch — things left as placeholders
+| File | What it controls |
+| --- | --- |
+| `src/data/projects.js` | Project cards (also feeds the terminal's `projects` command) |
+| `src/data/experience.js` | Journey timeline and certifications |
+| `src/data/skills.js` | Skill groups |
+| `src/components/Contact.jsx` | Contact email |
+| `src/components/Terminal.jsx` | Terminal commands and links |
 
-- **`src/data/projects.js`** — NVMe-Health-Core, Sky, and Ritun OS v3.0 all
-  have placeholder descriptions and `github` links pointing at
-  `github.com/keyboardnomouse/<guessed-repo-name>`. Swap in the real
-  one-liners, tech tags, and links (add a `live` URL too if any of them have
-  a deployed demo — the card will show a "Live" link automatically once
-  `live` is non-null).
-- **`src/components/Contact.jsx`** — the `EMAIL` constant is a placeholder
-  (`your.email@example.com`).
-- **`src/data/experience.js`** — only your NIE entry is in there. Add more
-  objects to the array (internships, hackathons, roles) in the same shape.
-- **`src/components/About.jsx`** — the second paragraph is a stand-in; worth
-  replacing with something in your own voice.
-- **`index.html`** — page `<title>` and meta description are generic; update
-  once you know the final domain/branding.
-
-## What's built where
+## Project structure
 
 ```
 src/
-  components/
-    Hero.jsx           the katana-slash intro (GSAP timeline) + sakura canvas
-    SakuraCanvas.jsx    hand-rolled canvas petal field, repelled by the cursor
-    CustomCursor.jsx    pink dot -> sakura flower / shuriken on hover targets
-    ProjectCard.jsx     "unsheathe" hover: border sweep + synthesised sound
-    SectionHeading.jsx  reusable eyebrow + mask-reveal title (scroll-triggered)
-    Reveal.jsx          reusable scroll-triggered fade/stagger wrapper
-    Navbar.jsx, Footer.jsx, About.jsx, Skills.jsx, Projects.jsx,
-    Experience.jsx, Contact.jsx
-  data/
-    projects.js, skills.js, experience.js   — edit content here, not in JSX
-  lib/
-    LenisProvider.jsx   Lenis <-> GSAP ScrollTrigger wiring + scrollTo context
-    sound.js            Web Audio synthesised "blade shing" (no audio file)
+  components/   Hero, About, Skills, Projects, Experience, Terminal, Contact, ...
+  data/         projects.js, experience.js, skills.js
+  lib/          Lenis + GSAP scroll wiring, utilities
 ```
 
-## Notes on a few implementation choices
+## Deployment
 
-- **Sakura petals are a hand-rolled canvas system**, not a `tsparticles`
-  preset — better performance and it doesn't have the generic
-  "particle library" look. It's contained to the hero section only; other
-  sections stay calm so the effect reads as a moment, not wallpaper.
-- **The hover "metal" sound is synthesised** via the Web Audio API
-  (`src/lib/sound.js`) rather than a shipped audio file — no licensing
-  question, no asset to load, and it's a one-line volume tweak if you want
-  it louder/softer/off.
-- **Reduced motion is respected** throughout — the slash intro, petal field,
-  and scroll reveals all check `prefers-reduced-motion` and fall back to a
-  simple fade.
-- **The custom cursor only replaces the native one on fine-pointer devices**
-  (`pointer: fine`), so touch/mobile gets the normal cursor behavior instead
-  of a hidden one.
+Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds the site and publishes `dist/` to the `gh-pages` branch with the custom domain `ritun.space`.
+
+In the repo settings, GitHub Pages should be set to **Deploy from a branch → `gh-pages` / root**.
+
+## Connect
+
+[GitHub](https://github.com/KeyboardNoMouse) · [LinkedIn](https://www.linkedin.com/in/ritun-jain) · ritunjain246@gmail.com

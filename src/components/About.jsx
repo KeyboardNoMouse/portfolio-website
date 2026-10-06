@@ -30,7 +30,7 @@ export default function About() {
               </p>
 
               <p className="mt-6 max-w-2xl font-body text-base leading-relaxed text-steel/90">
-                Computer Engineering student specializing in AI &amp; ML at{' '}
+                Computer Science &amp; Engineering student specializing in AI &amp; ML at{' '}
                 <span className="text-blade">The National Institute of Engineering</span>,
                 Mysuru — graduating in 2028. What I care about most is craft: code that's
                 precise, deliberate, and built to be understood by the next person who

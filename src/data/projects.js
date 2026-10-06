@@ -10,6 +10,16 @@ export const projects = [
     live: null,
   },
   {
+    id: 'nie-lost-and-found',
+    title: 'NIE Lost & Found',
+    tagline: 'Campus lost-and-found platform',
+    description:
+      'A Next.js and MongoDB platform with authentication, Cloudinary image uploads, and automated email notifications. Four-collection database with indexed search, soft deletes, and privacy-aware access, plus server-side validation, rate limiting, audit logging, and an admin moderation dashboard.',
+    tech: ['Next.js', 'MongoDB', 'Cloudinary', 'Node.js'],
+    github: null,
+    live: null,
+  },
+  {
     id: 'nvme-drive-failure-predictor',
     title: 'NVMe Drive Failure Predictor & Fleet Dashboard',
     tagline: 'Predictive maintenance system',
